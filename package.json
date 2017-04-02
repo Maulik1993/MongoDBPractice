@@ -1,0 +1,16 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "mongo db practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node s./bin/www"
+  },
+  "author": "maulik",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^2.4.0",
+    "mongoose": "^4.7.2"
+  }
+}

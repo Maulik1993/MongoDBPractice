@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MongoDB Practice</title>
+
+    <!-- <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="views/login.html" >
+  <script type="text/javascript" language="javascript" src="js/jquery-2.2.4.js"></script>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					MongoDB! <small>CRUD example in MongoDB</small>
+				</h1>
+			</div>
+			<div class="tabbable" id="tabs-641672">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a href="#panel-Insert" data-toggle="tab">Insert</a>
+					</li>
+					<li>
+						<a href="#panel-Update" id="UpdateContact" data-toggle="tab">Update</a>
+					</li>
+          <li>
+						<a href="#panel-View" id="displayContact" data-toggle="tab">View</a>
+					</li>
+          <li>
+            <a href="login">Login</a>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="panel-Insert">
+						  <h3>Contact Form</h3>
+                <form class="cf" action="/submit_form" method="post">
+                  <div class="half left cf">
+                    <input name="Name" type="text" id="input-name" placeholder="Name">
+                    <input name="Email" type="email" id="input-email" placeholder="Email Address">
+                    <input name="CNumber" type="text" id="input-subject" placeholder="Contact Number">
+                  </div>
+                  <div class="half right cf">
+                    <textarea name="Message" type="text" id="input-message" placeholder="Message"></textarea>
+                  </div>
+                  <input type="submit" value="Submit" id="input-submit" >
+                </form>
+					</div>
+					<div class="tab-pane" id="panel-Update">
+              <div class="jumbotron">
+                <h5>Update Feature coming soon!!!!</h5>
+              </div>
+              <div class="jumbotron well">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                             <div class="row">
+                                    <div id="id02"></div><!--display contact-->
+                              </div><!--End row -->
+                        </div><!--End col-md-12 -->
+                    </div><!--End row -->
+                </div><!--End container-fluid-->
+              </div><!--End jumbotron well -->
+
+              <!-- //////////////delete  contact ////////////// -->
+
+                <div class="modal fade" id="modal-container-Delete" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                  Delete Contact
+                </h4>
+              </div>
+                <div class="modal-body">
+                  <!-- action="add" method="post" -->
+                <form class="form-horizontal" action="/delete" method="post">
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-10">
+                      <input  id="deleteTitle"  class="form-control" name="Title" type="text">
+                    </div>
+                  </div>
+                  Are you sure you want to Delete Contact from list?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+                <input type="submit" value="Delete" name="btnSave" class="btn btn-primary">
+                <!-- <button type="submit" class="btn btn-primary" > -->
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- ///////////////////////////////////////////// -->
+
+					</div>
+          <div class="tab-pane" id="panel-View">
+            <div class="jumbotron">
+              <h5>View Feature updating!!!!</h5>
+              <div class="jumbotron well">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                             <div class="row">
+                                    <div id="id01"></div><!--display contact-->
+                              </div><!--End row -->
+                        </div><!--End col-md-12 -->
+                    </div><!--End row -->
+                </div><!--End container-fluid-->
+              </div><!--End jumbotron well -->
+            </div><!--End jumbotron -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/mainJquery.js"></script>
+<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
